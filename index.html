@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='grumblr'>
+<head>
+ <meta charset="UTF-8">
+ <title>Angular Todos</title>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+ <script src="app.js"></script>
+</head>
+<body ng-controller='todosCtrl as vm'>
+<h4>The whole list</h4>
+<span>Title</span><span>Author</span><span>Content</span><span>Photourl</span>
+<div ng-repeat="todo in vm.todos">
+{{todo.title}}-{{todo.author}}-->{{todo.content}}---->{{todo.photourl}}
+</div>
+<div>
+    <input type="text" id='title' ng-model="vm.newTitle">
+    </div>
+    <div>
+    <input type="text" id='author' ng-model="vm.newauthor">
+    </div>
+    <div>
+    <input type="text" id='content' ng-model="vm.newContent">
+    </div>
+    <div>
+    <input type="text" id='url' ng-model="vm.newurl">
+    </div>
+    <button ng-click="vm.addTodo()">Add Grumbles</button>
+    
+  
+</body>
+</html>
