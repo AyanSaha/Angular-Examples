@@ -10,7 +10,8 @@
 <body ng-controller='todosCtrl as vm'>
 <h4>The whole list</h4>
 <span>Title</span><span>Author</span><span>Content</span><span>Photourl</span>
-<div ng-repeat="todo in vm.todos">
+<div ng-repeat="todo in vm.todos|orderBy: 'author'">
+
 {{todo.title}}-{{todo.author}}-->{{todo.content}}---->{{todo.photourl}}
 </div>
 <div>
